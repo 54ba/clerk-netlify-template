@@ -42,11 +42,10 @@ Learn more about [Clerk](https://clerk.dev).
 - For the Environment variables the API and JWT keys will be located under Developers > API Keys within the Clerk dashboard. Add your [Clerk environment variables](https://dashboard.clerk.dev/) to a `.env` file like [`.env.local.sample`](./.env.local.sample) file or through the Netlify project dashboard at [https://app.netlify.com/](https://app.netlify.com/) Site settings/Build & deploy/Environment:
 
   ```
-  NEXT_PUBLIC_CLERK_FRONTEND_API="" 
-  CLERK_API_KEY=""
-  CLERK_JWT_KEY=""
+  NEXT_PUBLIC_CLERK_FRONTEND_API=""
+  CLERK_SECRET_KEY=""
   ```
-  > 🚨 Once you've added in the environment variables, you will need to go to the 'Deploy' tab within your Netlify Dashboard and trigger a new deploy. 
+  > 🚨 Once you've added in the environment variables, you will need to go to the 'Deploy' tab within your Netlify Dashboard and trigger a new deploy.
 
 - Start dev server (This starts your app in development mode, rebuilding assets on file changes.):
 

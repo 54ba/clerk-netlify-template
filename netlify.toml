@@ -13,10 +13,3 @@
 # Ensure proper Next.js handling
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-
-# Clerk configuration for Netlify extension
-[[plugins]]
-  package = "@clerk/netlify"
-  [plugins.inputs]
-    publishableKey = "pk_test_your_publishable_key_here"
-    secretKey = "sk_test_your_secret_key_here"
