@@ -13,3 +13,29 @@
 # Ensure proper Next.js handling
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# Environment variables for Clerk (these should be set in Netlify dashboard)
+[build.environment]
+  NEXT_PUBLIC_CLERK_SIGN_IN_URL = "/sign-in"
+  NEXT_PUBLIC_CLERK_SIGN_UP_URL = "/sign-up"
+  NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL = "/"
+  NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL = "/"
+  NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL = "https://midosale.netlify.app"
+  NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL = "https://midosale.netlify.app"
+
+# Redirects for Clerk authentication
+[[redirects]]
+  from = "/sign-in/*"
+  to = "/sign-in"
+  status = 200
+
+[[redirects]]
+  from = "/sign-up/*"
+  to = "/sign-up"
+  status = 200
+
+# Handle Clerk webhooks
+[[redirects]]
+  from = "/api/webhook"
+  to = "/api/webhook"
+  status = 200
