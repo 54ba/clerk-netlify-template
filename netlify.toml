@@ -1,13 +1,15 @@
 [build]
   command = "npm run build"
   publish = ".next"
+  base = "."
 
 [build.environment]
   NODE_VERSION = "18"
 
-# Remove the incorrect redirects that were causing issues
-# Next.js handles routing internally
-
-# Ensure no unnecessary plugins are loaded
+# Force Netlify to use this configuration
 [build.processing]
   skip_processing = false
+
+# Ensure proper Next.js handling
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
