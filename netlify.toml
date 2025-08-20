@@ -5,10 +5,8 @@
 [build.environment]
   NODE_VERSION = "18"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Remove the incorrect redirects that were causing issues
+# Next.js handles routing internally
 
 # Ensure no unnecessary plugins are loaded
 [build.processing]
